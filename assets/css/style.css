@@ -240,8 +240,8 @@ img {
 }
 
 .btn-sm {
-    padding: 0.8rem 1.6rem;
-    font-size: 1.2rem;
+    padding: 1.2rem 1.6rem;
+    font-size: 1rem;
 }
 
 .btn-block {
@@ -931,7 +931,7 @@ img {
     background-image: var(--partner-overlay), url('../images/utvconnect-banner.jpg');
     background-size: cover;
     background-position: center;
-    border: 2px solid var(--border-orange);
+    /* border: 2px solid var(--border-orange); */
     border-radius: var(--radius);
     padding: 5rem 6rem;
     box-shadow: 0 10px 40px rgba(255, 85, 0, 0.15);
