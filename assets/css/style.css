@@ -269,7 +269,7 @@ img {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background: var(--header-bg);
+    background: var(--header-bg) !important;
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
     transition: var(--transition);
