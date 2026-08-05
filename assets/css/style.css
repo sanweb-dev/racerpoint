@@ -25,7 +25,7 @@
     --border: rgba(0, 0, 0, 0.1);
     --border-orange: rgba(232, 78, 0, 0.3);
 
-    /* Header escuro como o footer */
+    /* Header escuro como o footer (em ambos os modos) */
     --header-bg: rgba(10, 11, 13, 0.95);
     --header-shadow: rgba(0, 0, 0, 0.5);
 
@@ -35,8 +35,8 @@
     /* Nav mobile bg */
     --nav-mobile-bg: #121418;
 
-    /* Hero overlay (suave: 40% na esquerda pra leitura e foto/vídeo real no restante) */
-    --hero-overlay: linear-gradient(90deg, rgba(245,245,247,0.70) 0%, rgba(245,245,247,0.40) 45%, rgba(245,245,247,0.05) 100%);
+    /* Hero overlay (degradê escuro ultra leve e sutil tanto de dia como de noite) */
+    --hero-overlay: linear-gradient(90deg, rgba(10, 11, 13, 0.60) 0%, rgba(10, 11, 13, 0.25) 35%, rgba(10, 11, 13, 0.0) 80%);
 
     /* Footer */
     --footer-bg: #0f1013;
@@ -88,13 +88,13 @@ body.dark-mode {
     --border: rgba(255, 255, 255, 0.1);
     --border-orange: rgba(255, 85, 0, 0.3);
 
-    --header-bg: rgba(10, 11, 13, 0.9);
+    --header-bg: rgba(10, 11, 13, 0.95);
     --header-shadow: rgba(0, 0, 0, 0.8);
 
     --logo-sub-color: #ffffff;
     --nav-mobile-bg: #1a1d24;
 
-    --hero-overlay: linear-gradient(90deg, rgba(10, 11, 13, 0.75) 0%, rgba(10, 11, 13, 0.40) 45%, rgba(10, 11, 13, 0.05) 100%);
+    --hero-overlay: linear-gradient(90deg, rgba(10, 11, 13, 0.60) 0%, rgba(10, 11, 13, 0.25) 35%, rgba(10, 11, 13, 0.0) 80%);
 
     --footer-bg: #060708;
     --footer-txt: #9ba3af;
