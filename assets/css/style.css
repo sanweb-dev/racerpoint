@@ -418,7 +418,7 @@ img {
 .stats-bar {
     background: var(--bg-surface);
     border-y: 1px solid var(--border);
-    padding: 3rem 0;
+    padding: 13rem 0 3rem 0;
 }
 
 .stats-grid {
