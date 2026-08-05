@@ -35,8 +35,8 @@
     /* Nav mobile bg */
     --nav-mobile-bg: #ffffff;
 
-    /* Hero overlay */
-    --hero-overlay: linear-gradient(90deg, rgba(245,245,247,0.95) 0%, rgba(245,245,247,0.80) 50%, rgba(245,245,247,0.25) 100%);
+    /* Hero overlay (suave: 40% na esquerda pra leitura e foto/vídeo real no restante) */
+    --hero-overlay: linear-gradient(90deg, rgba(245,245,247,0.70) 0%, rgba(245,245,247,0.40) 45%, rgba(245,245,247,0.05) 100%);
 
     /* Footer */
     --footer-bg: #0f1013;
@@ -94,7 +94,7 @@ body.dark-mode {
     --logo-sub-color: #ffffff;
     --nav-mobile-bg: #1a1d24;
 
-    --hero-overlay: linear-gradient(90deg, #0a0b0d 0%, rgba(10, 11, 13, 0.85) 50%, rgba(10, 11, 13, 0.4) 100%);
+    --hero-overlay: linear-gradient(90deg, rgba(10, 11, 13, 0.75) 0%, rgba(10, 11, 13, 0.40) 45%, rgba(10, 11, 13, 0.05) 100%);
 
     --footer-bg: #060708;
     --footer-txt: #9ba3af;
@@ -356,9 +356,7 @@ img {
     display: flex;
     align-items: center;
     overflow: hidden;
-    background-image: url('../images/vehicles/utv-hero.jpg');
-    background-size: cover;
-    background-position: center;
+    background: #0a0b0d;
 }
 
 .hero-video {
