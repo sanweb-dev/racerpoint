@@ -25,15 +25,15 @@
     --border: rgba(0, 0, 0, 0.1);
     --border-orange: rgba(232, 78, 0, 0.3);
 
-    /* Header */
-    --header-bg: rgba(245, 245, 247, 0.92);
-    --header-shadow: rgba(0, 0, 0, 0.1);
+    /* Header escuro como o footer */
+    --header-bg: rgba(10, 11, 13, 0.95);
+    --header-shadow: rgba(0, 0, 0, 0.5);
 
     /* Logo sub-text */
-    --logo-sub-color: #0f1013;
+    --logo-sub-color: #ffffff;
 
     /* Nav mobile bg */
-    --nav-mobile-bg: #ffffff;
+    --nav-mobile-bg: #121418;
 
     /* Hero overlay (suave: 40% na esquerda pra leitura e foto/vídeo real no restante) */
     --hero-overlay: linear-gradient(90deg, rgba(245,245,247,0.70) 0%, rgba(245,245,247,0.40) 45%, rgba(245,245,247,0.05) 100%);
@@ -317,7 +317,7 @@ img {
 .nav-link {
     font-size: 1.4rem;
     font-weight: 600;
-    color: var(--txt-muted);
+    color: rgba(255, 255, 255, 0.75);
 }
 
 .nav-link:hover, .nav-link.active {
