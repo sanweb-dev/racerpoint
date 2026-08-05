@@ -79,4 +79,66 @@ document.addEventListener('DOMContentLoaded', function () {
 
     window.addEventListener('scroll', updateHeaderBg);
     updateHeaderBg(); // aplica no load
+
+    // ─── Hero Slider Rotativo ──────────────────────────────────────────────
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('.hero-dot');
+    const prevBtn = document.getElementById('heroPrev');
+    const nextBtn = document.getElementById('heroNext');
+    let currentSlide = 0;
+    let slideTimer = null;
+    const SLIDE_INTERVAL = 5500; // 5.5 segundos por slide
+
+    function goToSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+
+        currentSlide = (index + slides.length) % slides.length;
+
+        slides[currentSlide].classList.add('active');
+        if (dots[currentSlide]) dots[currentSlide].classList.add('active');
+    }
+
+    function nextSlide() {
+        goToSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+        goToSlide(currentSlide - 1);
+    }
+
+    function startAutoSlide() {
+        stopAutoSlide();
+        slideTimer = setInterval(nextSlide, SLIDE_INTERVAL);
+    }
+
+    function stopAutoSlide() {
+        if (slideTimer) clearInterval(slideTimer);
+    }
+
+    if (slides.length > 0) {
+        if (nextBtn) {
+            nextBtn.addEventListener('click', function () {
+                nextSlide();
+                startAutoSlide();
+            });
+        }
+
+        if (prevBtn) {
+            prevBtn.addEventListener('click', function () {
+                prevSlide();
+                startAutoSlide();
+            });
+        }
+
+        dots.forEach((dot, idx) => {
+            dot.addEventListener('click', function () {
+                goToSlide(idx);
+                startAutoSlide();
+            });
+        });
+
+        // Inicia o carrossel automático
+        startAutoSlide();
+    }
 });

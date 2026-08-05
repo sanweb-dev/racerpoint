@@ -81,22 +81,79 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section (Slider Rotativo 3 Banners) -->
     <section class="hero" id="home">
-        <div class="hero-overlay"></div>
-        <div class="container hero-container">
-            <div class="hero-content">
-                <span class="badge">A SUA REFERÊNCIA EM UTVs NO BRASIL</span>
-                <h1 class="hero-title">DOMINE O TERRENO</h1>
-                <p class="hero-desc">
-                    Venda, preparação pesada e manutenção especializada para quem vive de off-road. Não somos apenas uma
-                    loja, somos a sua equipe de box.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#estoque" class="btn btn-primary btn-lg">Ver Estoque UTVs</a>
-                    <a href="#oficina" class="btn btn-outline btn-lg">Agendar na Oficina</a>
+        <div class="hero-slider" id="heroSlider">
+            
+            <!-- Slide 1: Estoque & Venda -->
+            <div class="hero-slide active" style="--slide-bg: url('../images/vehicles/utv-hero.jpg');">
+                <div class="hero-slide-bg"></div>
+                <div class="hero-overlay"></div>
+                <div class="container hero-container">
+                    <div class="hero-content">
+                        <span class="badge">A SUA REFERÊNCIA EM UTVs NO BRASIL</span>
+                        <h1 class="hero-title">DOMINE O TERRENO</h1>
+                        <p class="hero-desc">
+                            Venda, preparação pesada e manutenção especializada para quem vive de off-road. Não somos apenas uma
+                            loja, somos a sua equipe de box.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="#estoque" class="btn btn-primary btn-lg">Ver Estoque UTVs</a>
+                            <a href="#oficina" class="btn btn-outline btn-lg">Agendar na Oficina</a>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <!-- Slide 2: Oficina & Preparação -->
+            <div class="hero-slide" style="--slide-bg: url('../images/vehicles/canam-maverick-x3.jpg');">
+                <div class="hero-slide-bg"></div>
+                <div class="hero-overlay"></div>
+                <div class="container hero-container">
+                    <div class="hero-content">
+                        <span class="badge">OFICINA ESPECIALIZADA & CHECKLIST DE 50 PONTOS</span>
+                        <h1 class="hero-title">PREPARAÇÃO DE <span>CAMPEÕES</span></h1>
+                        <p class="hero-desc">
+                            Revisão pesada, acerto de suspensão, motor e manutenção preventiva de alta performance para sua máquina não falhar na trilha.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="#oficina" class="btn btn-primary btn-lg">Conhecer a Oficina</a>
+                            <a href="https://wa.me/555532212299" target="_blank" class="btn btn-outline btn-lg">Falar com Mecânico</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: Peças & Acessórios -->
+            <div class="hero-slide" style="--slide-bg: url('../images/vehicles/polaris-rzr-pro.jpg');">
+                <div class="hero-slide-bg"></div>
+                <div class="hero-overlay"></div>
+                <div class="container hero-container">
+                    <div class="hero-content">
+                        <span class="badge">PEÇAS ORIGINAIS & PERFORMANCE OFF-ROAD</span>
+                        <h1 class="hero-title">EQUIPE DE BOX <span>COMPLETA</span></h1>
+                        <p class="hero-desc">
+                            Pneus de alta tração, correias reforçadas, guinchos, leds e componentes importados com pronta entrega para seu UTV rodar forte.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="#pecas" class="btn btn-primary btn-lg">Ver Catálogo de Peças</a>
+                            <a href="#troca" class="btn btn-outline btn-lg">Avaliar Meu UTV</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Controles do Slider -->
+        <button class="hero-arrow hero-prev" id="heroPrev" aria-label="Banner anterior">&lsaquo;</button>
+        <button class="hero-arrow hero-next" id="heroNext" aria-label="Próximo banner">&rsaquo;</button>
+
+        <!-- Indicadores / Dots -->
+        <div class="hero-dots" id="heroDots">
+            <span class="hero-dot active" data-slide="0"></span>
+            <span class="hero-dot" data-slide="1"></span>
+            <span class="hero-dot" data-slide="2"></span>
         </div>
     </section>
 

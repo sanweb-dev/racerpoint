@@ -349,20 +349,58 @@ img {
     transition: var(--transition);
 }
 
-/* Hero Section (100vh - Tela cheia inteira com foto oficial do UTV) */
+/* Hero Section (100vh - Tela cheia inteira com Slider Rotativo Fade) */
 .hero {
     position: relative;
     width: 100%;
     min-height: 100vh;
     height: 100vh;
-    padding-top: 10rem;
-    padding-bottom: 4rem;
+    overflow: hidden;
+    background: #0a0b0d;
+}
+
+.hero-slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.2s ease-in-out, visibility 1.2s ease-in-out;
     display: flex;
     align-items: center;
-    overflow: hidden;
-    background-image: url('../images/vehicles/utv-hero.jpg');
+    padding-top: 10rem;
+    padding-bottom: 4rem;
+}
+
+.hero-slide.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
+}
+
+/* Ligeira sensação de movimento na imagem de fundo do slide ativo (Zoom Sutil 6s) */
+.hero-slide-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-image: var(--slide-bg);
     background-size: cover;
     background-position: center;
+    transform: scale(1);
+    transition: transform 7s cubic-bezier(0.25, 1, 0.5, 1);
+    z-index: 1;
+}
+
+.hero-slide.active .hero-slide-bg {
+    transform: scale(1.08);
 }
 
 .hero-overlay {
@@ -370,6 +408,75 @@ img {
     inset: 0;
     background: var(--hero-overlay);
     z-index: 2;
+}
+
+.hero-container {
+    position: relative;
+    z-index: 3;
+}
+
+/* Controles de Setas do Hero */
+.hero-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: rgba(10, 11, 13, 0.45);
+    border: 1px solid var(--border-orange);
+    color: #ffffff;
+    font-size: 3.6rem;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    transition: var(--transition);
+    line-height: 1;
+    padding-bottom: .4rem;
+}
+
+.hero-arrow:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 0 20px var(--primary-glow);
+}
+
+.hero-prev {
+    left: 3rem;
+}
+
+.hero-next {
+    right: 3rem;
+}
+
+/* Indicadores Dots no Rodapé do Hero */
+.hero-dots {
+    position: absolute;
+    bottom: 3.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    gap: 1.2rem;
+}
+
+.hero-dot {
+    width: 3.2rem;
+    height: .4rem;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.hero-dot.active, .hero-dot:hover {
+    background: var(--primary);
+    width: 4.8rem;
+    box-shadow: 0 0 12px var(--primary-glow);
 }
 
 .hero-container {
