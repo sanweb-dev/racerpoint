@@ -349,13 +349,14 @@ img {
     transition: var(--transition);
 }
 
-/* Hero Section */
+/* Hero Section (100vh - Tela cheia inteira) */
 .hero {
     position: relative;
     width: 100%;
-    min-height: 90vh;
-    padding-top: 14rem;
-    padding-bottom: 8rem;
+    min-height: 100vh;
+    height: 100vh;
+    padding-top: 10rem;
+    padding-bottom: 4rem;
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -366,8 +367,10 @@ img {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
+    min-width: 100%;
+    min-height: 100%;
     object-fit: cover;
     z-index: 1;
     pointer-events: none;
