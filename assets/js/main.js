@@ -141,4 +141,12 @@ document.addEventListener('DOMContentLoaded', function () {
         // Inicia o carrossel automático
         startAutoSlide();
     }
+
+    // ─── Smooll Framework Integration (Animações & Transições) ───────────────
+    if (typeof Smooll !== 'undefined') {
+        Smooll.init({
+            pageTransitions: true,
+            revealOnScroll: true
+        });
+    }
 });
