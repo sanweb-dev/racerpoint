@@ -349,7 +349,7 @@ img {
     transition: var(--transition);
 }
 
-/* Hero Section (100vh - Tela cheia inteira) */
+/* Hero Section (100vh - Tela cheia inteira com foto oficial do UTV) */
 .hero {
     position: relative;
     width: 100%;
@@ -360,20 +360,9 @@ img {
     display: flex;
     align-items: center;
     overflow: hidden;
-    background: #0a0b0d;
-}
-
-.hero-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    min-width: 100%;
-    min-height: 100%;
-    object-fit: cover;
-    z-index: 1;
-    pointer-events: none;
+    background-image: url('../images/vehicles/utv-hero.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 .hero-overlay {
